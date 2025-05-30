@@ -33,14 +33,8 @@ __H2 Database__
 __GET API Testing__  
         ![{EE3B5CC4-B840-487D-8C5E-61D59AE140BC}](https://github.com/user-attachments/assets/2d431afe-d3eb-4031-afe9-832d9fb60e28)  
 
+
         ![{3747E80D-C423-4227-91C1-819EC354AAB4}](https://github.com/user-attachments/assets/c9d60b85-23be-4c48-921f-4f42cf756f18)
 
       
-      
-
-      Negative Scenario Testing
-      ![{7C674EFC-E4BF-42A0-AC0A-DD853849D4E3}](https://github.com/user-attachments/assets/4130dae6-591c-4aac-89ca-32b3c82eabfd)
-
-
-
 
