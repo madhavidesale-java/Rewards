@@ -9,7 +9,7 @@ A customer receives 2 points for every dollar spent over $100 in each transactio
   
 Given a record of every transaction during a three month period, calculate the reward points earned for each customer per month and total.   
   
-#API Endpoint
+__#API Endpoint__  
     GET /api/rewards/customer/{customerId}?from=date&to=date
 
     Example - http://localhost:8080/api/rewards/custumer/3?from=2024-01-01&to=2026-02-02
