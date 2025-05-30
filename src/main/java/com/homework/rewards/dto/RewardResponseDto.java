@@ -12,7 +12,7 @@ public class RewardResponseDto {
 	private Long customerId;
 	private String customerName;
 	private int customerAge;
-	private Map<String,Integer> monthlyRewards;
+	private Map<String,Double> monthlyTransactions;
 	private int totalRewardPoints;
 	
 	

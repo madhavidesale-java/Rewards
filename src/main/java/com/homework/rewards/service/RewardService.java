@@ -1,7 +1,9 @@
 package com.homework.rewards.service;
 
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +18,8 @@ public class RewardService {
 	@Autowired
 	RewardsRepository rewardRepository;
 
-	public RewardResponseDto calculateRewardForCustomer(Long customerID, LocalDate from, LocalDate to)
-			throws Exception {
+	public RewardResponseDto calculateRewardForCustomer(Long customerID, LocalDate from, LocalDate to) throws Exception
+			 {
 
 		List<Transactions> listTransactions = rewardRepository.findByCustomerIdAndTransactionsDateBetween(customerID,
 				from, to);
@@ -27,13 +29,18 @@ public class RewardService {
 			throw new Exception("Customer transaction not found");
 
 		}
+		
+		Map<String,Double> monthlyTransactions = new HashMap<>();
 
 		for (Transactions t : listTransactions) {
-			totalReward += calculateReward(t.getAmount());
+			int point =  calculateReward(t.getAmount());
+			monthlyTransactions.put(t.getTransactionsDate().getMonth().toString(),t.getAmount());				
+			totalReward += point;
 
 		}
 		System.out.println("Reward " + totalReward);
-		return RewardResponseDto.builder().customerId(customerID)
+		return RewardResponseDto.builder().customerId(customerID).customerAge(listTransactions.get(0).getCustomerAge())
+				.monthlyTransactions(monthlyTransactions)
 				.customerName(listTransactions.get(0).getCustomerName()).totalRewardPoints(totalReward).build();
 
 	}
@@ -44,7 +51,7 @@ public class RewardService {
 			reward += (int) ((amount - 100) * 2) + 50;
 		}
 		if (amount > 50 && amount < 100) {
-			reward += amount;
+			reward += amount-50;
 		}
 
 		return reward;

@@ -22,52 +22,5 @@ public class Transactions {
 	private Double amount;
 	private LocalDate transactionsDate;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Long customerId) {
-		this.customerId = customerId;
-	}
-
-	public String getCustomerName() {
-		return customerName;
-	}
-
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
-
-	public Integer getCustomerAge() {
-		return customerAge;
-	}
-
-	public void setCustomerAge(Integer customerAge) {
-		this.customerAge = customerAge;
-	}
-
-	public Double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
-
-	public LocalDate getTransactionsDate() {
-		return transactionsDate;
-	}
-
-	public void setTransactionsDate(LocalDate transactionsDate) {
-		this.transactionsDate = transactionsDate;
-	}
-
+	
 }
