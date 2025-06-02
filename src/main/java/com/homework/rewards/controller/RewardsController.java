@@ -20,9 +20,9 @@ import com.homework.rewards.service.RewardService;
 public class RewardsController {
 
 	@Autowired
-	RewardService rewardService;
+	private RewardService rewardService;
 
-	@GetMapping("/custumer/{customerId}")
+	@GetMapping("/customer/{customerId}")
 	public ResponseEntity<?> getRewardDetail(@PathVariable Long customerId,
 			@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
 			@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to) {
@@ -35,5 +35,9 @@ public class RewardsController {
 		}
 
 	}
-
 }
+
+
+
+
+ 

@@ -16,7 +16,7 @@ import com.homework.rewards.repository.RewardsRepository;
 public class RewardService {
 
 	@Autowired
-	RewardsRepository rewardRepository;
+	private RewardsRepository rewardRepository;
 
 	public RewardResponseDto calculateRewardForCustomer(Long customerID, LocalDate from, LocalDate to) throws Exception
 			 {
