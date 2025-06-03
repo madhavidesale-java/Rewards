@@ -42,11 +42,11 @@ __H2 Database__
 
 __GET API Testing__  
      1. List of transactions in 5 months for Customer Id 2
-       ![image](https://github.com/user-attachments/assets/447c8514-20fd-4748-8ee7-b1ffe7352816)
+ ![image](https://github.com/user-attachments/assets/09e6514a-9e3b-4358-bda3-028957661c8d)
+
 
       2. List of transactions in 3 months for customer Id 2
-![image](https://github.com/user-attachments/assets/71de0c13-2093-41d5-97e4-bd985429f0fa)
-
+![image](https://github.com/user-attachments/assets/52a17d80-6bf1-49ee-b787-259a85319a36)
 
       
  __Negative Scenario__  
