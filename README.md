@@ -17,25 +17,35 @@ __#API Endpoint__
     Example - http://localhost:8080/api/rewards/customer/3?from=2024-01-01&to=2026-02-02
 
         Sample Response - 
-      {
-        "customerId": 3,
-        "customerName": "Tam",
-        "customerAge": 61,
-        "monthlyTransactions": {
-          "MARCH": 120
-        },
-        "totalRewardPoints": 90
-      }
+        {
+            "customerId": 2,
+            "customerName": "Pam",
+            "customerAge": 34,
+            "monthlyTransactions": {
+              "FEBRUARY": 130
+            },
+            "totalRewardPoints": 110,
+            "transactions": [
+              {
+                "id": 4,
+                "customerId": 2,
+                "customerName": "Pam",
+                "customerAge": 34,
+                "amount": 130,
+                "transactionsDate": "2025-02-03"
+              }
+            ]
+          }
 
 __H2 Database__   
         ![{F0D20AB0-2788-4573-8D68-EBF869E08B5A}](https://github.com/user-attachments/assets/aeb5b5bc-a118-4ad7-86f9-cd5dacca218b)
 
 __GET API Testing__  
-      ![image](https://github.com/user-attachments/assets/3a0a84e3-7cd0-498a-9a6e-f320661e408e)
-  
+     1. List of transactions in 5 months for Customer Id 2
+       ![image](https://github.com/user-attachments/assets/447c8514-20fd-4748-8ee7-b1ffe7352816)
 
-__Multiple Transactions__  
-       ![image](https://github.com/user-attachments/assets/2249e437-8351-478b-81d1-4bae386b14bf)
+      2. List of transactions in 3 months for customer Id 2
+      ![image](https://github.com/user-attachments/assets/45fc13aa-3952-45ba-913e-461c356df3e1)
 
 
  __Negative Scenario__  
