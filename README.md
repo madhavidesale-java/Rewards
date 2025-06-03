@@ -45,11 +45,12 @@ __GET API Testing__
        ![image](https://github.com/user-attachments/assets/447c8514-20fd-4748-8ee7-b1ffe7352816)
 
       2. List of transactions in 3 months for customer Id 2
-      ![image](https://github.com/user-attachments/assets/45fc13aa-3952-45ba-913e-461c356df3e1)
+         ![image](https://github.com/user-attachments/assets/f61c08fa-b08b-4a92-a92d-7e3cd1270ea9)
 
 
  __Negative Scenario__  
-        ![image](https://github.com/user-attachments/assets/2f1a0875-8337-43d4-81a1-92656cc04785)
+       ![image](https://github.com/user-attachments/assets/f9e469d7-b2c5-476d-9664-1f451d0314c7)
+
 
 
 
