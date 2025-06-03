@@ -14,7 +14,7 @@ Given a record of every transaction during a three month period, calculate the r
 __#API Endpoint__  
     GET /api/rewards/customer/{customerId}?from=date&to=date
 
-    Example - http://localhost:8080/api/rewards/custumer/3?from=2024-01-01&to=2026-02-02
+    Example - http://localhost:8080/api/rewards/customer/3?from=2024-01-01&to=2026-02-02
 
         Sample Response - 
       {
@@ -31,13 +31,16 @@ __H2 Database__
         ![{F0D20AB0-2788-4573-8D68-EBF869E08B5A}](https://github.com/user-attachments/assets/aeb5b5bc-a118-4ad7-86f9-cd5dacca218b)
 
 __GET API Testing__  
-        ![{EE3B5CC4-B840-487D-8C5E-61D59AE140BC}](https://github.com/user-attachments/assets/2d431afe-d3eb-4031-afe9-832d9fb60e28)  
+      ![image](https://github.com/user-attachments/assets/3a0a84e3-7cd0-498a-9a6e-f320661e408e)
+  
 
 __Multiple Transactions__  
-        ![{3747E80D-C423-4227-91C1-819EC354AAB4}](https://github.com/user-attachments/assets/c9d60b85-23be-4c48-921f-4f42cf756f18)
+       ![image](https://github.com/user-attachments/assets/2249e437-8351-478b-81d1-4bae386b14bf)
+
 
  __Negative Scenario__  
-         ![{7C674EFC-E4BF-42A0-AC0A-DD853849D4E3}](https://github.com/user-attachments/assets/4130dae6-591c-4aac-89ca-32b3c82eabfd)
+        ![image](https://github.com/user-attachments/assets/2f1a0875-8337-43d4-81a1-92656cc04785)
+
 
 
 
