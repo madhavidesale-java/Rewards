@@ -26,6 +26,4 @@ public class Transactions {
 	private Double amount;
 	private LocalDate transactionsDate;
 
-	
 }
-

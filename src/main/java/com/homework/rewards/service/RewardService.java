@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.homework.rewards.dto.RewardResponseDto;
 import com.homework.rewards.entity.Transactions;
+import com.homework.rewards.exception.TransactionNotFoundException;
 import com.homework.rewards.repository.RewardsRepository;
 
 @Service
@@ -18,45 +19,37 @@ public class RewardService {
 	@Autowired
 	private RewardsRepository rewardRepository;
 
-	public RewardResponseDto calculateRewardForCustomer(Long customerID, LocalDate from, LocalDate to) throws Exception
-			 {
+	public RewardResponseDto calculateRewardForCustomer(Long customerID, LocalDate from, LocalDate to) {
 
 		List<Transactions> listTransactions = rewardRepository.findByCustomerIdAndTransactionsDateBetween(customerID,
 				from, to);
 		int totalReward = 0;
-
 		if (listTransactions.isEmpty()) {
-			throw new Exception("Customer transaction not found");
+			throw new TransactionNotFoundException("Customer transaction not found");
 
 		}
-		
-//		List<Transactions> listOfTransactions = li
-		Map<String,Double> monthlyTransactions = new HashMap<>();
 
+		Map<String, Double> monthlyTransactions = new HashMap<>();
 		for (Transactions t : listTransactions) {
-			int point =  calculateReward(t.getAmount());
-			monthlyTransactions.put(t.getTransactionsDate().getMonth().toString(),t.getAmount());				
+			int point = calculateReward(t.getAmount());
+			monthlyTransactions.put(t.getTransactionsDate().getMonth().toString(), t.getAmount());
 			totalReward += point;
 
 		}
-		System.out.println("Reward " + totalReward);
+		System.out.println("Total Reward " + totalReward);
 		return RewardResponseDto.builder().customerId(customerID).customerAge(listTransactions.get(0).getCustomerAge())
-				.monthlyTransactions(monthlyTransactions)
-				.customerName(listTransactions.get(0)
-				.getCustomerName())
-				.totalRewardPoints(totalReward)
-				.transactions(listTransactions)
-				.build();
+				.monthlyTransactions(monthlyTransactions).customerName(listTransactions.get(0).getCustomerName())
+				.totalRewardPoints(totalReward).transactions(listTransactions).build();
 
 	}
 
 	private int calculateReward(double amount) {
 		int reward = 0;
 		if (amount > 100) {
-			reward += (int) ((amount - 100) * 2) + 50;
+			reward += Math.round((amount - 100) * 2) + 50;
 		}
 		if (amount > 50 && amount < 100) {
-			reward += amount-50;
+			reward += amount - 50;
 		}
 
 		return reward;

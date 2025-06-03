@@ -15,13 +15,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RewardResponseDto {
-	
+
 	private Long customerId;
 	private String customerName;
 	private int customerAge;
-	private Map<String,Double> monthlyTransactions;
+	private Map<String, Double> monthlyTransactions;
 	private int totalRewardPoints;
 	private List<Transactions> transactions;
-	
-	
+
 }
