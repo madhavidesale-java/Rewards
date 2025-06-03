@@ -31,7 +31,7 @@ public class RewardsController {
 			RewardResponseDto rewardResponseDto = rewardService.calculateRewardForCustomer(customerId, from, to);
 			return ResponseEntity.ok(rewardResponseDto);
 		} catch (Exception e) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Error while processing " + e.getMessage());
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(" " + e.getMessage());
 		}
 
 	}

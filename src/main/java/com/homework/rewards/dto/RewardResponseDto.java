@@ -1,6 +1,9 @@
 package com.homework.rewards.dto;
 
+import java.util.List;
 import java.util.Map;
+
+import com.homework.rewards.entity.Transactions;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +21,7 @@ public class RewardResponseDto {
 	private int customerAge;
 	private Map<String,Double> monthlyTransactions;
 	private int totalRewardPoints;
+	private List<Transactions> transactions;
 	
 	
 }

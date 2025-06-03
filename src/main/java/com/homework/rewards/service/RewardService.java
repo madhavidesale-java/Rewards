@@ -30,6 +30,7 @@ public class RewardService {
 
 		}
 		
+//		List<Transactions> listOfTransactions = li
 		Map<String,Double> monthlyTransactions = new HashMap<>();
 
 		for (Transactions t : listTransactions) {
@@ -41,7 +42,11 @@ public class RewardService {
 		System.out.println("Reward " + totalReward);
 		return RewardResponseDto.builder().customerId(customerID).customerAge(listTransactions.get(0).getCustomerAge())
 				.monthlyTransactions(monthlyTransactions)
-				.customerName(listTransactions.get(0).getCustomerName()).totalRewardPoints(totalReward).build();
+				.customerName(listTransactions.get(0)
+				.getCustomerName())
+				.totalRewardPoints(totalReward)
+				.transactions(listTransactions)
+				.build();
 
 	}
 
