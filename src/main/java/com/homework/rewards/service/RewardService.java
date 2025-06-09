@@ -29,16 +29,16 @@ public class RewardService {
 
 		}
 
-		Map<String, Double> monthlyTransactions = new HashMap<>();
+		Map<String, Integer> monthlyRewards = new HashMap<>();
 		for (Transactions t : listTransactions) {
 			int point = calculateReward(t.getAmount());
-			monthlyTransactions.put(t.getTransactionsDate().getMonth().toString(), t.getAmount());
+			monthlyRewards.put(t.getTransactionsDate().getMonth().toString(), calculateReward(t.getAmount()));
 			totalReward += point;
 
 		}
 		System.out.println("Total Reward " + totalReward);
 		return RewardResponseDto.builder().customerId(customerID).customerAge(listTransactions.get(0).getCustomerAge())
-				.monthlyTransactions(monthlyTransactions).customerName(listTransactions.get(0).getCustomerName())
+				.monthlyRewards(monthlyRewards).customerName(listTransactions.get(0).getCustomerName())
 				.totalRewardPoints(totalReward).transactions(listTransactions).build();
 
 	}
